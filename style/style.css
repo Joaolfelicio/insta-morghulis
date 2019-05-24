@@ -1,0 +1,591 @@
+* {
+    box-sizing: border-box;
+    transition-duration: 0.3s;
+}
+
+*:not(input) {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+li {
+    list-style: none;
+}
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+/* OVERALL CARDDDDDDDDDDDDDDDDDDDDDD */
+
+.card {
+    max-width: 614px;
+    margin: 20px auto;
+    border-radius: 3px;
+}
+
+/* nav bar for info */
+
+#info {
+    height: 60px;
+    position: fixed;
+    width: 100%;
+    top: 0%;
+    z-index: 2;
+    background-color: white;
+    border-bottom: 1px solid #efefef;
+}
+
+#info ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+    list-style: none;
+}
+
+#info div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#info a {
+    text-decoration: none;
+    color: black;
+}
+
+nav a[href="#instagram"] img {
+    width: 100px;
+    height: 30px;
+    margin-top: 10px;
+}
+
+#search {
+    border-radius: 3px;
+    text-align: center;
+    color: #DBDBDB;
+    border: 1px solid #DBDBDB;
+    height: 28px;
+    padding: 5px;
+    display: none;
+}
+
+#search::placeholder {
+    color: rgb(158, 157, 157);
+}
+
+a[href] i {
+    font-size: 28px;
+    margin: 15px;
+}
+
+.fa-instagram {
+    border-right: 1px solid black;
+    padding-right: 15px;
+    color: black;
+}
+
+/* NAV BAR FOR STORIES */
+
+#stories {
+    margin-top: 60px;
+    height: 124px;
+    max-width: 614px;
+    border-radius: 3px;
+    border-bottom: 1px solid #efefef;
+    overflow: scroll;
+}
+
+#stories::-webkit-scrollbar {
+    display: none;
+}
+
+#stories ul {
+    display: flex;
+    height: 100%;
+    ;
+    list-style: none;
+    align-items: center;
+}
+
+#stories li {
+    text-decoration: none;
+    margin: 10px;
+    padding-right: 5px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+#stories img {
+    height: 56px;
+    border: 1px solid #F2703F;
+    border-radius: 50%;
+}
+
+#stories p {
+    margin-top: 8px;
+}
+
+/* END NAV BAR FOR STORIES */
+
+/* TOP BAR WITH NAME IMG AND OPTIONS */
+
+.info-bar {
+    height: 60px;
+    border-bottom: 1px solid #efefef;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.photo-name {
+    width: 35%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 13px;
+}
+
+.photo-name img {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+}
+
+.photo-name p {
+    margin-left: 15px;
+}
+
+.options i {
+    margin-right: 15px;
+}
+
+/* MAIN PHOTO */
+
+.main-photo {
+    width: 100%;
+    height: 100%;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+/* BAR FOR INTERACTION */
+
+.interaction-bar {
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.interaction-bar i {
+    font-size: 24px;
+}
+
+.like-comment {
+    width: 115px;
+    height: 100%;
+    margin-left: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.save i {
+    margin-right: 15px;
+}
+
+/* NUMBER OF LIKES BAR */
+
+.comments-name-box {
+    margin: 5px 15px 10px 15px;
+}
+
+/* COMMENT BOX */
+
+.comment-box {
+    width: 90%;
+}
+
+.description {
+    margin-top: 10px
+}
+
+.total-comments {
+    color: #999999;
+    margin-top: 10px;
+    font-weight: 600;
+}
+
+.text-comment {
+    margin-top: 10px;
+}
+
+.date {
+    margin-top: 10px;
+    font-size: 12px;
+    ;
+    text-transform: uppercase;
+    color: #999;
+}
+
+.comment {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.comment i {
+    font-size: 12px;
+    margin-left: 10px;
+}
+
+.hash {
+    color: rgb(98, 121, 247);
+}
+
+/* COMMENT BOXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
+
+.add-comment-box {
+    display: none;
+}
+
+.add-comment-form {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+textarea {
+    width: 90%;
+}
+
+textarea::-webkit-scrollbar {
+    display: none;
+}
+
+textarea:focus {
+    outline: none !important;
+    border-color: #719ECE;
+    box-shadow: none;
+}
+
+/* CHANGING PLACEHOLDER FONTTTTTTTTTTTTTTT */
+
+textarea::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 25px;
+}
+
+textarea::-webkit-input-placeholder {
+    /* Webkit */
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 14px;
+}
+
+textarea:-ms-input-placeholder {
+    /* IE */
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+#stories-aside,
+#profile-aside {
+    display: none
+}
+
+/*              LOADING ANIMATIONNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN */
+
+#loading {
+    margin: 100px auto;
+    display: block;
+    width: 64px;
+    height: 64px;
+}
+
+#loading:after {
+    content: " ";
+    display: block;
+    width: 46px;
+    height: 46px;
+    margin: 1px;
+    border-radius: 50%;
+    border: 5px solid #000;
+    border-color: rgb(98, 121, 247) transparent rgb(98, 121, 247) transparent;
+    animation: lds-dual-ring 1s linear infinite;
+}
+
+/* MEDIA QUERIES */
+
+/*       TABLET MODE        */
+
+@media screen and (min-width: 500px) {
+    #stories {
+        border: 1px solid #efefef;
+        margin: 100px auto 0px auto;
+    }
+
+    .card {
+        border: 1px solid #efefef;
+        border-left: none;
+        border-right: none;
+    }
+
+    #search {
+        display: block;
+        width: 215px;
+    }
+
+    .add-comment-box {
+        display: flex;
+        padding-left: 15px;
+        padding-right: 15px;
+        border-top: 1px solid #efefef;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: 56px;
+    }
+
+    .add-comment {
+        border: none;
+        width: 400px;
+        height: 100%;
+    }
+
+    .post {
+        color: rgb(98, 121, 247);
+        opacity: 0.7;
+    }
+}
+
+/* 
+REMOVED BORDER LEFT AND RIGHT OF THE CARD SO IN PHONE MODE IT WOULDNT 
+BE SHOWN IN THE BORDER OF THE .MAIN-PHOTO SO BORDER LEFT AND RIGHT IN THE 
+CARD STARTS SHOWING WHEN THE IMAGE REACHES MAX WIDTH     
+*/
+
+@media screen and (min-width: 600px) {
+    .card {
+        border-left: 1px solid #efefef;
+        border-right: 1px solid #efefef;
+    }
+}
+
+/*          DESKTOP MODE         */
+
+@media screen and (min-width: 1000px) {
+    #stories-aside, #profile-aside {
+        display: block
+    }
+    
+    #info {
+        height: 77px;
+        display: flex;
+        align-items: center;
+    }
+
+    #info ul {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    #layout {
+        width: 935px;
+        margin: 128px auto 0px auto;
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    main {
+        width: 614px;
+    }
+
+    #stories {
+        display: none;
+    }
+
+    /* ASIDE HEREEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE */
+    aside {
+        position: sticky;
+        left: 0%;
+        top: 15%;
+        width: 293px;
+        height: 900px;
+    }
+
+    /*               PROFILE BOX                 */
+    #profile-aside {
+        width: 100%;
+        height: 60px;
+        display: flex;
+    }
+
+    #profile-aside img {
+        width: 50px;
+        height: 50px;
+        margin: auto 5px;
+        border-radius: 50%;
+    }
+
+    #account {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #name {
+        color: #999999;
+        font-size: 14px;
+    }
+
+    /*              STORIES                     */
+    #stories-aside {
+        margin-top: 15px;
+        height: 223px;
+        border: 1px solid #efefef;
+        border-radius: 3px;
+    }
+
+    #stories-title {
+        height: 10%;
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 14px;
+    }
+
+    #stories-box {
+        height: 90%;
+        overflow: scroll;
+        overflow-x: hidden;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .stories-subtitle {
+        color: #999;
+        font-weight: 600;
+        font-size: 14px;
+    }
+
+    #stories-title strong {
+        font-weight: 600;
+        font-size: 14px;
+    }
+
+    .story-item {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+    .story-item img {
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        margin-left: 15px;
+        margin-right: 10px;
+    }
+
+    #stories-box .nameoftheuser {
+        font-weight: 600;
+        font-size: 14px;
+    }
+
+    #stories-box .howmuchtimeago {
+        color: #999;
+        text-transform: uppercase;
+        font-size: 14px;
+    }
+
+    /*                  SUGGESTIONS               */
+    #suggestions-aside {
+        width: 293px;
+        height: 223px;
+        border: 1px solid #efefef;
+        margin-top: 15px;
+        border-radius: 3px;
+    }
+
+    #suggestions-title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 22.09px;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .see-all {
+        font-weight: 600;
+        font-size: 14px;
+    }
+
+    #suggestions-box {
+        height: 198.89px;
+        overflow: scroll;
+        overflow-x: hidden;
+    }
+
+    #suggestions-item {
+        margin: 8.9px auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .suggestion-photo {
+        width: 35px;
+        height: 35px;
+        margin: 0px 10px 0px 15px;
+        border-radius: 50%;
+    }
+
+    .suggestion-name {
+        font-weight: 600;
+        font-size: 14px;
+    }
+
+    .who-follows {
+        color: #999;
+        font-size: 14px;
+    }
+
+    .photo-user-info {
+        display: flex;
+    }
+
+    .suggestion-follow {
+        margin-right: 13px;
+        font-size: 14px;
+        color: #5DAAF3;
+    }
+}
+
+/*                          ANIMATIONS                        */
+
+@keyframes lds-dual-ring {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
